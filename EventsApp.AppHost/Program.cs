@@ -6,4 +6,6 @@ builder.AddProject<Projects.EventsApp_Web>("webfrontend")
     .WithExternalHttpEndpoints()
     .WithReference(apiService);
 
+builder.AddProject<Projects.AuthService>("authservice");
+
 builder.Build().Run();

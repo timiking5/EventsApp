@@ -10,6 +10,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventsApp.ApiService", "Eve
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventsApp.Web", "EventsApp.Web\EventsApp.Web.csproj", "{26E1FF1B-6713-4C81-9BEF-F46B12BFC1B7}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthService", "AuthService\AuthService.csproj", "{4138F9E1-1D69-4C48-8712-ECA1075CDDD1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FE89C851-650C-4146-9195-2F3FDA4D3850}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +39,10 @@ Global
 		{26E1FF1B-6713-4C81-9BEF-F46B12BFC1B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26E1FF1B-6713-4C81-9BEF-F46B12BFC1B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26E1FF1B-6713-4C81-9BEF-F46B12BFC1B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4138F9E1-1D69-4C48-8712-ECA1075CDDD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4138F9E1-1D69-4C48-8712-ECA1075CDDD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4138F9E1-1D69-4C48-8712-ECA1075CDDD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4138F9E1-1D69-4C48-8712-ECA1075CDDD1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

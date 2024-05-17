@@ -10,6 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AuthService\AuthService.csproj" />
     <ProjectReference Include="..\EventsApp.ApiService\EventsApp.ApiService.csproj" />
     <ProjectReference Include="..\EventsApp.Web\EventsApp.Web.csproj" />
   </ItemGroup>
