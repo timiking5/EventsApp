@@ -94,6 +94,7 @@ public class AuthServiceImp : IAuthService
                 };
                 return "";
             }
+            
             return result.Errors.FirstOrDefault().Description;
         }
         catch (Exception ex)

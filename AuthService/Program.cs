@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.AddServiceDefaults();
-
+builder.AddRabbitMQClient("messaging");
 // Add services to the container.
 
 builder.Services.AddDbContext<AppDbContext>(opt =>
@@ -22,6 +22,7 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFramework
 
 builder.Services.AddControllers();
 
+builder.Services.AddScoped<MessageSender>();
 builder.Services.AddScoped<IJwtTokenGenerator, JwtTokenGenerator>();
 builder.Services.AddScoped<IAuthService, AuthServiceImp>();
 

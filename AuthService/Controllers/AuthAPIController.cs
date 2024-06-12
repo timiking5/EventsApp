@@ -1,4 +1,6 @@
-﻿using AuthService.Models.DTO;
+﻿using AuthService.Data;
+using AuthService.Models.DTO;
+using AuthService.Service;
 using AuthService.Service.IService;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,11 +12,15 @@ public class AuthAPIController : ControllerBase
 {
     private ResponseDTO _response;
     private readonly IAuthService _authService;
+    private readonly MessageSender _messageSender;
+    private readonly AppDbContext _db;
 
-    public AuthAPIController(IAuthService authService )
+    public AuthAPIController(IAuthService authService, MessageSender messageSender, AppDbContext db)
     {
         _authService = authService;
         _response = new();
+        _messageSender = messageSender;
+        _db = db;
     }
 
     [HttpPost("register")]
@@ -27,6 +33,13 @@ public class AuthAPIController : ControllerBase
             _response.Message = errorMessage;
             return BadRequest(_response);
         }
+        _messageSender.SendUserMessage(new UserDTO {
+            Id = _db.Users.FirstOrDefault(x => x.Email == request.Email)!.Id,
+            Email = request.Email,
+            FirstName = request.FirstName,
+            LastName = request.LastName,
+            PhoneNumber = request.PhoneNumber,
+        });
         return Ok(_response);
     }
 

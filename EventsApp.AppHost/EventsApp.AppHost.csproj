@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -13,10 +13,12 @@
     <ProjectReference Include="..\AuthService\AuthService.csproj" />
     <ProjectReference Include="..\EventsApp.ApiService\EventsApp.ApiService.csproj" />
     <ProjectReference Include="..\EventsApp.Web\EventsApp.Web.csproj" />
+    <ProjectReference Include="..\EventsService\EventsService.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Aspire.Hosting.AppHost" Version="8.0.0-preview.7.24251.11" />
+    <PackageReference Include="Aspire.Hosting.AppHost" Version="8.0.1" />
+    <PackageReference Include="Aspire.Hosting.RabbitMQ" Version="8.0.1" />
   </ItemGroup>
 
 </Project>
